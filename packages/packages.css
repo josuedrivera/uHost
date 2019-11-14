@@ -1,3 +1,18 @@
+/* importing your own font faces  */
+/* add font weight if using multiple fonts  */
+/* files should start with lower case to avoid browser issues  */
+@font-face {
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+
 main {
     padding-top: 2rem;
 }
@@ -17,6 +32,7 @@ main {
     border: 4px solid #0e4f1f;
     border-left: none;
     position: relative;
+    overflow: hidden;
 }
 
 .package:hover,
@@ -36,11 +52,14 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.2rem;
+    margin: 0;
     font-size: 0.8rem;
     color: white;
     background: #ff5454;
     padding: 0.5rem;
+    transform: rotate(45deg)translate(3.6rem, -1rem);
+    width: 12rem;
+    text-align: center;
 }
 
 .package__subtitle {
@@ -53,6 +72,8 @@ main {
     font-size: 1.2rem;
     color: #0e4f1f;
     background: white;
+    /* font-family: "AnonymousPro"; */
+    /* font-weight: 700; */
 }
 
 .clearfix {
@@ -96,7 +117,7 @@ main {
         margin-right: auto;
     }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1335px) {
     .package {
         border-left: 4px solid #0e4f1f;
     }
